@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "facetsnfregular";
+  src: url("fonts/facetsnf-webfont.woff2") format("woff2"),
+    url("fonts/facetsnf-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Font colors */
+
+  --font-color-standard: hsl(0, 1%, 86%);
+  --font-color-dark: hsl(0, 4%, 25%);
+  --h2-font-color-dark: hsl(0, 0%, 0%);
+
+  /* Elements backgrounds and main colors */
+
+  --color-primary-YELLOW: hsl(43, 100%, 50%);
+  --color-primary-RED: hsl(0, 91%, 41%);
+  --color-primary-BLUE: hsl(216, 95%, 37%);
+  --color-accent: hsl(165, 47%, 30%);
+
+  /* Colors under pictures */
+
+  --color-undercoat-GREEN: hsl(166, 63%, 55%);
+  --color-undercoat-YELLOW: hsl(43, 97%, 69%);
+  --color-undercoat-RED: hsl(0, 89%, 59%);
+  --color-undercoat-BLUE: hsl(216, 85%, 56%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Rajdhani", sans-serif;
+  color: var(--font-color-standard);
+
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+
+  background-color: black;
+}
+
+/* ...::: [ TYPOGRAPHY ] :::... */
+
+h1,
+h2,
+h3 {
+  font-family: "facetsnfregular", sans-serif;
+  color: white;
+  letter-spacing: 3px;
+
+  margin: 0;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
