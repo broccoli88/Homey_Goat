@@ -18,75 +18,144 @@
   </head>
   <body>
     <main>
-      <article class="hero">
-        <h1>Painting is our passion</h1>
-        <h3>We can transit your imagination to the table top.</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi
-        </p>
-      </article>
-      <article class="main-container">
-        <span class="key-word-right"><h3>Gallery</h3></span>
-        <div id="gallery-description" class="tab-size">
-          <img class="description__bg" src="images/Khador.jpeg" alt="" />
+      <!-- ...::: [ HERO ] :::... -->
 
-          <section class="description__txt description__txt--right">
-            <h3>is waiting</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi
-            </p>
-          </section>
-        </div>
+      <article class="main-desktop">
+        <section class="hero">
+          <h1>Painting is our <span class="key-word-hero">passion</span></h1>
+          <h3>We can transit your imagination to the table top.</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          </p>
+        </section>
+        <div class="main-img img-hero"></div>
       </article>
 
-      <article class="main-container">
-        <span class="key-word-left"><h3>Offer</h3></span>
-        <div id="offer-description" class="tab-size">
-          <img
-            class="description__bg"
-            src="images/painting_workstation.jpg"
-            alt=""
-          />
+      <!-- ...::: [ GALLERY ] :::... -->
 
-          <section class="description__txt description__txt--left">
-            <h3>Check out our</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi
-            </p>
-          </section>
-        </div>
+      <article class="main-desktop">
+        <div class="main-img img-gallery"></div>
+        <section class="main-container">
+          <button class="tab-button button-right">
+            <a href="#"
+              ><span>Gallery</span
+              ><span
+                class="iconify-inline"
+                data-icon="fluent:triangle-12-filled"
+                style="color: black"
+                data-width="20"
+                data-height="20"
+                data-rotate="90deg"
+              ></span
+            ></a>
+          </button>
+          <span class="key-word-right"><h3>Gallery</h3></span>
+          <div id="gallery-description" class="tab-size">
+            <img class="description__bg" src="images/Khador.jpeg" alt="" />
+            <section class="description__txt description__txt--right">
+              <h3 class="tab-header-gallery">is waiting</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi
+              </p>
+            </section>
+          </div>
+        </section>
       </article>
 
-      <article class="main-container">
-        <span class="key-word-right"><h3>Contact</h3></span>
-        <div id="contact-description" class="tab-size">
-          <img class="description__bg" src="images/US.jpg" alt="" />
+      <!-- ...::: [ OFFER ] :::... -->
 
-          <section class="description__txt description__txt--right">
-            <h3>us for more details</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi
-            </p>
-          </section>
-        </div>
+      <article class="main-desktop">
+        <section class="main-container">
+          <button class="tab-button button-left">
+            <a href="#"
+              ><span
+                class="iconify-inline"
+                data-icon="fluent:triangle-12-filled"
+                style="color: black"
+                data-width="20"
+                data-height="20"
+                data-rotate="-90deg"
+              ></span
+              ><span>Offer</span></a
+            >
+          </button>
+          <span class="key-word-left"><h3>Offer</h3></span>
+          <div id="offer-description" class="tab-size">
+            <img
+              class="description__bg bg-fit-offer"
+              src="images/painting_workstation.jpg"
+              alt=""
+            />
+            <section class="description__txt description__txt--left">
+              <h3 class="tab-header-offer">Check out our</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi
+              </p>
+            </section>
+          </div>
+        </section>
+        <figure class="main-img">
+          <img src="" alt="" />
+        </figure>
       </article>
+
+      <!-- ...::: [ CONTACT ] :::... -->
+
+      <article class="main-desktop">
+        <section class="main-container">
+          <button class="tab-button button-right">
+            <a text-contact href="#"
+              ><span text-contact>Contact</span
+              ><span
+                class="iconify-inline"
+                data-icon="fluent:triangle-12-filled"
+                style="color: white"
+                data-width="20"
+                data-height="20"
+                data-rotate="90deg"
+              ></span
+            ></a>
+          </button>
+          <span class="key-word-right"><h3>Contact</h3></span>
+          <div id="contact-description" class="tab-size">
+            <img class="description__bg" src="images/US.jpg" alt="" />
+            <section
+              text-contact
+              class="description__txt description__txt--right"
+            >
+              <h3 class="tab-header-contact">us for more details</h3>
+              <p text-contact>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi
+              </p>
+            </section>
+          </div>
+        </section>
+        <figure class="main-img">
+          <img src="" alt="" />
+        </figure>
+      </article>
+
+      <!-- ...::: [ MOBILE BUTTONS ] :::... -->
 
       <section class="main-buttons">
         <button class="btn-main style--gallery"><a href="#">Gallery</a></button>
         <button class="btn-main style--offer"><a href="#">Offer</a></button>
         <button class="btn-main style--contact"><a href="#">Contact</a></button>
       </section>
+
+      <!-- ...::: [ FOOTER ] :::... -->
+
       <footer>
         <figure id="footer-social-media">
           <span
@@ -115,3 +184,6 @@
     </main>
   </body>
 </html>
+
+<!-- change padding in all articles except "hero" -->
+<!-- check first img why it repeats -->

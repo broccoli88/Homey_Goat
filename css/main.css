@@ -29,8 +29,8 @@
 
   --color-undercoat-GREEN: hsl(166, 63%, 55%);
   --color-undercoat-YELLOW: hsl(43, 91%, 55%);
-  --color-undercoat-RED: hsl(0, 89%, 45%);
-  --color-undercoat-BLUE: hsl(216, 85%, 36%);
+  --color-undercoat-RED: hsl(0, 89%, 55%);
+  --color-undercoat-BLUE: hsl(216, 85%, 46%);
 
   /* Paddings and margins */
 
@@ -46,7 +46,7 @@
 
   /* --TABLET */
 
-  --paddding-desktop-main: 2.6rem 12rem;
+  --paddding-desktop-main: 2.6rem 20rem;
   --padding-desktop-text: 2.3rem;
 }
 
@@ -124,7 +124,7 @@ h4 {
 
 @media (min-width: 670px) {
   body {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     padding: var(--paddding-tablet-main);
   }
 
@@ -147,11 +147,12 @@ h4 {
 
 @media (min-width: 1100px) {
   body {
-    font-size: 2rem;
+    font-size: 2.4rem;
+    padding: var(--paddding-desktop-main);
   }
 
   h1 {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 
   h2 {
@@ -324,6 +325,10 @@ nav[data-visible="false"] {
   display: none;
 }
 
+.main-img {
+  display: none;
+}
+
 @media (min-width: 670px) {
   header {
     flex-direction: row;
@@ -451,6 +456,7 @@ nav[data-visible="false"] {
   font-family: var(--font-family-Face);
   font-size: 6rem;
   color: white;
+  letter-spacing: 3px;
 }
 
 footer {
@@ -467,12 +473,18 @@ footer {
 }
 
 @media (min-width: 670px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 18.4rem;
+  }
+
   .main-buttons {
     display: none;
   }
 
   .hero {
-    width: min(700px, 80%);
+    width: min(70rem, 80%);
     padding: var(--padding-tablet-text);
     margin-inline: auto;
   }
@@ -504,13 +516,25 @@ footer {
     position: relative;
   }
 
-  main article:nth-child(3) {
-    justify-content: flex-start;
+  .main-container button a {
+    color: black;
+  }
+
+  .left-tab {
+    margin-inline-end: auto;
+  }
+
+  *[text-contact] {
+    color: white;
+  }
+
+  section[text-contact] > h3 {
+    color: white;
   }
 
   .tab-size {
     width: 41.8rem;
-    height: 51.3rem;
+    height: 60.3rem;
   }
 
   #gallery-description {
@@ -525,21 +549,27 @@ footer {
     filter: opacity(20%) brightness(70%);
   }
 
+  .bg-fit-offer {
+    border-radius: 0 13rem 0 0;
+  }
+
   .description__txt {
+    width: 41.3rem;
     margin-top: 16.5rem;
 
+    font-weight: 500;
     color: var(--h2-font-color-dark);
 
     position: absolute;
-    top: 0;
+    top: 10rem;
   }
 
   .description__txt--right {
-    right: 4rem;
+    right: -5rem;
   }
 
   .description__txt--left {
-    left: 4rem;
+    left: 5rem;
   }
 
   .description__txt > h3 {
@@ -547,39 +577,49 @@ footer {
     color: var(--h2-font-color-dark);
   }
 
+  .tab-header-gallery {
+    width: 100%;
+
+    position: absolute;
+    top: -10rem;
+    right: 5rem;
+  }
+
+  .tab-header-offer {
+    width: 100%;
+
+    position: absolute;
+    top: -10rem;
+    left: -4.5rem;
+  }
+
+  .tab-header-contact {
+    width: 100%;
+
+    position: absolute;
+    top: -10rem;
+    right: 10.6rem;
+  }
+
   .description__txt > p {
-    width: 40ch;
-    margin-top: 5rem;
+    width: 30ch;
     text-align: center;
   }
 
-  .btn-main {
-    width: fit-content;
-    height: fit-content;
-
-    cursor: pointer;
-    border: 0;
-    background-color: transparent;
-  }
-
-  .btn-main a {
-    font-family: inherit;
-    font-size: inherit;
-    color: white;
-  }
-
   #offer-description {
-    border-radius: 0 130px 0 0;
+    border-radius: 0 13rem 0 0;
     background-color: var(--color-undercoat-RED);
+
+    margin-inline-end: auto;
+  }
+
+  #offer-description h3 {
+    text-align: right;
   }
 
   #contact-description {
     background-color: hsl(216, 85%, 36%);
     clip-path: polygon(35% 8%, 100% 0, 100% 100%, 0 100%, 0 0);
-  }
-
-  #offer-description h3 {
-    text-align: right;
   }
 
   .key-word-right {
@@ -597,7 +637,7 @@ footer {
 
   .key-word-left {
     color: white;
-    font-size: 5rem;
+    font-size: 5.1rem;
 
     position: absolute;
     top: 16.5rem;
@@ -607,5 +647,153 @@ footer {
 
   .key-word-left > h3 {
     font-size: 5rem;
+  }
+
+  .tab-button {
+    width: fit-content;
+    height: fit-content;
+
+    background-color: transparent;
+    border: 0;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+
+    position: absolute;
+    top: 8rem;
+
+    z-index: 10;
+  }
+
+  .button-right {
+    padding-right: 2rem;
+
+    right: 0;
+  }
+
+  .button-left {
+    padding-left: 2rem;
+
+    left: 0;
+  }
+
+  .tab-button a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    position: relative;
+
+    transition: all 0.3s ease-in;
+  }
+
+  .tab-button a:hover {
+    font-weight: 600;
+  }
+
+  .tab-button a::before {
+    content: "";
+    display: inline-block;
+
+    height: 1px;
+    width: 65%;
+
+    background-color: black;
+
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+
+    transition: all 0.3s ease-in;
+  }
+
+  .button-right a::before {
+    left: -100%;
+  }
+
+  .button-left a::before {
+    right: -100%;
+  }
+
+  .tab-button a:hover::before {
+    opacity: 1;
+  }
+
+  .button-right a:hover::before {
+    left: 0;
+  }
+
+  .button-left a:hover::before {
+    right: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 18.4rem;
+  }
+
+  .main-buttons {
+    display: none;
+  }
+
+  .hero {
+    width: 41.8rem;
+    height: 84rem;
+    padding: var(--padding-desktop-text);
+    margin-inline: 0;
+    text-align: left;
+
+    background-color: var(--color-accent);
+    position: relative;
+  }
+
+  .hero > h1 {
+    margin-inline: 0;
+    width: 70rem;
+    position: absolute;
+    top: 5rem;
+    left: 3.2rem;
+  }
+
+  .hero > h3 {
+    font-size: 3.6rem;
+    margin-top: 20rem;
+  }
+
+  .main-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-img {
+    display: inline-block;
+    margin-top: 20rem;
+
+    width: 80rem;
+    height: 60rem;
+
+    position: relative;
+
+    background-blend-mode: luminosity, normal;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .img-hero {
+    clip-path: polygon(29% 0, 100% 0, 100% 71%, 75% 100%, 0 100%, 0 24%);
+    background: url(../images/battle.jpg), var(--color-accent);
+  }
+
+  .main-container {
+    width: fit-content;
+  }
+
+  .img-gallery {
+    clip-path: polygon(97% 14%, 100% 84%, 26% 100%, 0 47%, 6% 0);
+    background: url(../images/Khador.jpeg), var(--color-primary-YELLOW);
+    background-size: cover;
   }
 }
