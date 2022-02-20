@@ -60,6 +60,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -331,6 +332,10 @@ nav[data-visible="false"] {
 }
 
 @media (min-width: 670px) {
+  .main-toggle {
+    display: initial;
+  }
+
   header {
     flex-direction: row;
     justify-content: space-between;
@@ -469,6 +474,8 @@ article:first-of-type {
   letter-spacing: 3px;
 }
 
+/* ...::: [ FOOTER ] :::... */
+
 footer {
   width: 100%;
   margin: 1rem auto;
@@ -514,6 +521,7 @@ footer {
     width: 30px;
     height: 35px;
     border: 2px solid white;
+    background-color: transparent;
     opacity: 0.6;
 
     cursor: pointer;
