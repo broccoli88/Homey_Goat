@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Homey Goat - Offer</title>
+		<title>Homey Goat - Contact</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -13,7 +13,7 @@
 		/>
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/navbar.css" />
-		<link rel="stylesheet" href="css/offer.css" />
+		<link rel="stylesheet" href="css/contact.css" />
 		<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 		<script src="js/index.js" defer></script>
 	</head>
@@ -79,17 +79,19 @@
 					</li>
 					<li>
 						<a href="gallery.html"
-							><button class="menu-btn style--gallery">gallery</button></a
+							><button class="menu-btn style--gallery">
+								gallery
+							</button></a
 						>
 					</li>
 					<li>
 						<a href="offer.html">
-							<button class="menu-btn style--offer-onpage">offer</button>
+							<button class="menu-btn style--offer">offer</button>
 						</a>
 					</li>
 					<li>
-						<a href="contact.html">
-							<button class="menu-btn style--contact">contact</button>
+						<a href="#">
+							<button class="menu-btn style--contact-onpage">contact</button>
 						</a>
 					</li>
 					<figure id="social-media">
@@ -98,7 +100,7 @@
 								<span
 									class="iconify-inline"
 									data-icon="carbon:logo-instagram"
-									style="color: white"
+									style="color: hsl(216, 95%, 37%)"
 									data-width="34"
 									data-height="34"
 								></span>
@@ -109,7 +111,7 @@
 								<span
 									class="iconify-inline"
 									data-icon="ant-design:facebook-outlined"
-									style="color: white"
+									style="color: hsl(216, 95%, 37%)"
 									data-width="34"
 									data-height="34"
 								></span>
@@ -120,7 +122,7 @@
 								<span
 									class="iconify-inline"
 									data-icon="ci:mail"
-									style="color: white"
+									style="color: hsl(216, 95%, 37%)"
 									data-width="36"
 									data-height="36"
 								></span>
@@ -130,149 +132,98 @@
 				</ul>
 			</nav>
 		</header>
-
+		
 		<main>
-			<article class="hero-offer">
+			<article class="hero-contact">
 				<figure>
-					<h1>Offer</h1>
-					<h3>Choose suitable offer to your needs!</h3>
+					<h1>Contact us</h1>
+					<h3>We will gladly answer all your questions!</h3>
 				</figure>
 			</article>
-			<article class="section-offer">
-				<h2 section-decoration>Assembly</h2>
-				<section class="offer__content">
-					<h4>Offer 1</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>40 pln / figure</h3>
+			<article id="contact-informations">
+				<h3>Contact Informations</h3>
+				<section>
+					<h4>Email</h4>
+					<a href="contact.html#contact-informations">maciekkoska@gmail.com</a>
 				</section>
-				<section class="offer__content">
-					<h4>Offer 2</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>60 pln / figure</h3>
+				<section>
+					<h4>Facebook</h4>
+					<a target="_blank" href="https://www.facebook.com/HomeyGoatStudio/">www.facebook.com/HomeyGoatStudio/</a>
 				</section>
-				<section class="offer__content">
-					<h4>Offer 3</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>80 pln / figure</h3>
+				<section>
+					<h4>Instagram</h4>
+					<a target="_blank" href="#">Jakis link do insta</a>
 				</section>
 			</article>
-			<article class="section-offer">
-				<h2 section-decoration>Painting</h2>
-				<section class="offer__content">
-					<h4>Offer 1</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>40 pln / figure</h3>
+			<form>
+				<h3>Contact us!</h3>
+				<section class="contact-form">
+					<label for="name">Name</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Enter name"
+						aria-placeholder="Enter name"
+						minlength="3"
+						maxlength="30"
+					/>
 				</section>
-				<section class="offer__content">
-					<h4>Offer 2</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>60 pln / figure</h3>
+				<section class="contact-form">
+					<label for="last-name"> Last Name</label>
+					<input
+						type="text"
+						id="last-name"
+						name="name"
+						placeholder="Enter name/nickname"
+						aria-placeholder="Enter last name"
+						minlength="3"
+						maxlength="30"
+						required
+						aria-required="true"
+					/>
 				</section>
-				<section class="offer__content">
-					<h4>Offer 3</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>80 pln / figure</h3>
+				<section class="contact-form">
+					<label for="email">Email</label>
+					<input
+						type="email"
+						id="email"
+						name="name"
+						placeholder="Enter email"
+						aria-placeholder="Enter your email"
+						minlength="3"
+						maxlength="30"
+						required
+						aria-required="true"
+					/>
 				</section>
-			</article>
-			<article class="section-offer">
-				<h2 section-decoration>Basing</h2>
-				<section class="offer__content">
-					<h4>Offer 1</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>40 pln / figure</h3>
+				<section class="contact-form">
+					<label for="text-area">How can we help you?</label>
+					<textarea
+						placeholder="Enter your question"
+						aria-placeholder="Enter your question"
+						name="name"
+						id="text-area"
+						rows="10"
+						minlength="3"
+						maxlength="500"
+					></textarea>
 				</section>
-				<section class="offer__content">
-					<h4>Offer 2</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>60 pln / figure</h3>
-				</section>
-				<section class="offer__content">
-					<h4>Offer 3</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>80 pln / figure</h3>
-				</section>
-			</article>
-			<article class="section-offer">
-				<h2 section-decoration>Magnetizing</h2>
-				<section class="offer__content">
-					<h4>Offer 1</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>40 pln / figure</h3>
-				</section>
-				<section class="offer__content">
-					<h4>Offer 2</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>60 pln / figure</h3>
-				</section>
-				<section class="offer__content">
-					<h4>Offer 3</h4>
-					<p>
-						ste qui accusamus quo aut. Rem rem porro accusantium repellat non
-					</p>
-					<h3>80 pln / figure</h3>
-				</section>
-			</article>
-			<article id="cta">
-				<section id="cta__description">
-					<p>Do you have any questions?</p>
-					<p>or</p>
-					<p>Do you want to place an order?</p>
-				</section>
-
+				<button id="form__submit-button" type="submit">SUBMIT</button>
 				<figure aria-hidden="true">
-					<span
-						aria-hidden="true"
-						id="cta__question-mark"
-						class="iconify-inline"
-						data-icon="emojione-monotone:white-question-mark"
-						style="color: white"
-						data-width="64"
-						data-height="64"
-					></span>
-					<span
-						aria-hidden="true"
-						id="cta__goat"
-						class="iconify-inline"
-						data-icon="noto-v1:goat"
-						data-width="100"
-						data-height="100"
-					></span>
-					<span
-						aria-hidden="true"
-						id="cta__arrowhead"
-						class="iconify-inline"
-						data-icon="fluent:triangle-12-filled"
-						style="color: white"
-						data-width="20"
-						data-height="20"
-						data-rotate="90deg"
-					></span>
+					<img aria-hidden="true" id="form__img" src="images/covenant.webp" alt="" />
 				</figure>
-				<a href="contact.html#contact-informations">
-					<button id="cta__button">CONTACT US</button>
-				</a>
+			</form>
+			<article id="acquaintances">
+				<h4>Befriended Studios and Shops</h4>
+				<section class="acquaintances__info">
+					<p>Arcane Studio</p>
+					<a target="_blank" href="https://arcanesteamstudio.com/">https://arcanesteamstudio.com/</a>
+				</section class="acquaintances__info">
+				<section class="acquaintances__info">
+					<p>GNOM Sklep</p>
+					<a target="_blank" href="https://gnom-sklep.pl/">https://gnom-sklep.pl/</a>
+				</section>
 			</article>
 		</main>
 		<footer>
@@ -282,7 +233,7 @@
 						<span
 							class="iconify-inline"
 							data-icon="carbon:logo-instagram"
-							style="color: hsl(0, 91%, 41%)"
+							style="color: hsl(216, 95%, 37%)"
 							data-width="34"
 							data-height="34"
 						></span>
@@ -293,7 +244,7 @@
 						<span
 							class="iconify-inline"
 							data-icon="ant-design:facebook-outlined"
-							style="color: hsl(0, 91%, 41%)"
+							style="color: hsl(216, 95%, 37%)"
 							data-width="34"
 							data-height="34"
 						></span>
@@ -304,7 +255,7 @@
 						<span
 							class="iconify-inline"
 							data-icon="ci:mail"
-							style="color: hsl(0, 91%, 41%)"
+							style="color: hsl(216, 95%, 37%)"
 							data-width="36"
 							data-height="36"
 						></span>
@@ -317,7 +268,7 @@
 				<span
 					class="iconify-inline"
 					data-icon="akar-icons:align-to-top"
-					style="color: hsl(0, 91%, 60%)"
+					style="color: hsl(216, 85%, 66%)"
 					data-width="24"
 					data-height="24"
 				>
