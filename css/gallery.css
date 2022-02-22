@@ -344,12 +344,17 @@ h2[section-decoration]::after {
 		grid-column: span 2;
 	}
 
+	.gallery figure:hover,
+	.gallery figure:focus {
+		transform: scale(1.1);
+	}
+
 	.gallery img {
 		cursor: pointer;
 	}
 
 	.gallery figcaption {
-		width: fit-content;
+		width: 100%;
 		position: relative;
 		cursor: pointer;
 	}
@@ -478,5 +483,71 @@ footer {
 @media (min-width: 1100px) {
 	#move-to-top {
 		right: 4rem;
+	}
+}
+
+/* TODO GALLERY TILE ZOOM */
+
+body {
+	position: relative;
+}
+
+#gallery__tile-zoomed {
+	width: 90%;
+	height: fit-content;
+
+	position: fixed;
+	top: 20vh;
+	left: 5%;
+}
+
+#gallery__img-zoomed {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border: 2px solid var(--color-primary-YELLOW);
+}
+
+#gallery__caption-zoomed {
+	width: 100%;
+
+	font-size: 2.2rem;
+	font-weight: 500;
+	color: var(--font-color-h2-3-4);
+
+	padding: 0.5rem var(--padding-desktop-text);
+	position: relative;
+}
+
+#gallery__caption-zoomed::before {
+	content: "";
+	display: inline-block;
+	height: 80%;
+	width: 3px;
+
+	background-color: var(--color-primary-YELLOW);
+
+	position: absolute;
+	left: 0;
+	bottom: 10%;
+}
+
+#gallery__tile-zoomed[data-zoom-triggered="true"] {
+	display: fixed;
+}
+
+#gallery__tile-zoomed[data-zoom-triggered="false"] {
+	display: none;
+}
+
+@media (min-width: 1100px) {
+	#gallery__tile-zoomed {
+		width: 55%;
+		height: fit-content;
+
+		position: fixed;
+		top: 5vh;
+		left: 22.5%;
 	}
 }

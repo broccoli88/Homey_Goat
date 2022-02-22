@@ -311,6 +311,10 @@ main {
 
 /* ? ...::: [ FORM ] :::... */
 
+#color-blue {
+	color: var(--color-primary-BLUE);
+}
+
 form {
 	margin-top: 5rem;
 	display: flex;
@@ -321,11 +325,11 @@ form {
 }
 
 form > h3 {
-	/* align-self: flex-start; */
 	margin-bottom: 2rem;
 }
 
-.contact-form {
+.contact-form,
+textarea {
 	width: min(100%, 44rem);
 	font-size: clamp(1.6rem, 1.2vw, 2.2rem);
 }
@@ -334,8 +338,7 @@ form > h3 {
 	display: block;
 }
 
-.contact-form label,
-textarea {
+.contact-form label {
 	margin-bottom: 0.5rem;
 
 	font-size: clamp(1.8rem, 1.6vw, 2.4rem);
@@ -351,6 +354,7 @@ textarea:focus {
 
 textarea {
 	width: min(100%, 44rem);
+	font-weight: 500;
 }
 
 .contact-form input {
@@ -358,7 +362,6 @@ textarea {
 	height: 2.2em;
 
 	font-weight: 500;
-	text-align: top;
 }
 
 #question {
@@ -381,6 +384,13 @@ textarea {
 	cursor: pointer;
 }
 
+#form__submit-button:hover,
+#form__submit-button:focus {
+	background-color: var(--color-primary-BLUE);
+	font-weight: 600;
+	box-shadow: 0 0 0 3px black, 0 0 0 6px var(--color-primary-BLUE);
+}
+
 #form__img {
 	display: none;
 }
@@ -388,13 +398,6 @@ textarea {
 @media (min-width: 670px) {
 	form {
 		margin-top: 10rem;
-	}
-
-	#form__submit-button:hover,
-	#form__submit-button:focus {
-		background-color: var(--color-primary-BLUE);
-		font-weight: 600;
-		box-shadow: 0 0 0 3px black, 0 0 0 6px var(--color-primary-BLUE);
 	}
 }
 

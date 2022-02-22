@@ -290,52 +290,53 @@ nav[data-visible="false"] {
 
 	cursor: pointer;
 }
+.style--main,
+.style--gallery,
+.style--offer,
+.style--contact {
+	text-shadow: 2px 2px 5px black;
+	border: 0;
+}
+
+.style--main-onpage,
+.style--gallery-onpage,
+.style--offer-onpage,
+.style--contact-onpage {
+	background-color: transparent;
+	color: white;
+	font-weight: 600;
+}
 
 .style--main {
-	border: 0;
 	background-color: var(--color-accent);
-}
-.style--main-onpage {
-	background-color: transparent;
-	border: 2px solid var(--color-accent);
-
-	font-weight: 600;
 }
 
 .style--gallery {
-	border: 0;
 	background-color: var(--color-primary-YELLOW);
 }
 
-.style--gallery-onpage {
-	background-color: transparent;
-	border: 2px solid var(--color-primary-YELLOW);
-
-	font-weight: 600;
-}
-
 .style--offer {
-	border: 0;
 	background-color: var(--color-primary-RED);
 }
 
-.style--offer-onpage {
-	background-color: transparent;
-	border: 2px solid var(--color-primary-RED);
-
-	font-weight: 600;
-}
-
 .style--contact {
-	border: 0;
 	background-color: var(--color-primary-BLUE);
 }
 
-.style--contact-onpage {
-	background-color: transparent;
-	border: 2px solid var(--color-primary-BLUE);
+.style--main-onpage {
+	border: 2px solid var(--color-accent);
+}
 
-	font-weight: 600;
+.style--gallery-onpage {
+	border: 2px solid var(--color-primary-YELLOW);
+}
+
+.style--offer-onpage {
+	border: 2px solid var(--color-primary-RED);
+}
+
+.style--contact-onpage {
+	border: 2px solid var(--color-primary-BLUE);
 }
 
 #social-media {

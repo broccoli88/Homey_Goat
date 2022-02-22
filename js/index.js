@@ -1,5 +1,5 @@
 
-//!  ...::: [ NAVBAR] :::...
+//*  ...::: [ NAVBAR] :::...
 
 function navBarToggle() {
 
@@ -51,40 +51,45 @@ function navBarToggle() {
 }
 
 
-// navBarToggle()
+navBarToggle()
 
-
-
-
-//!  ...::: [ GALLERY TILE TOGGLE ] :::...
+//*  ...::: [ GALLERY TILE TOGGLE ] :::...
 
 
 function zoomGalleryImage() {
     const galleryTiles = document.querySelectorAll(`figure img`);
-    const galleryTile = document.querySelector('figure img');
+    const galleryTileCaption = document.querySelector('figure figcaption')
+
+    const zoomedTile = document.querySelector(`#gallery__tile-zoomed`)
     const zoomedTileImage = document.querySelector(`#gallery__img-zoomed`);
     const zoomedTileCaption = document.querySelector(`#gallery__caption-zoomed`);
 
+
+    galleryTiles.forEach((galleryTile) => {
+        galleryTile.addEventListener('click', () => {
+            let zoomTrigger = zoomedTile.getAttribute('data-zoom-triggered')
+            let imgAddress = galleryTile.getAttribute(`src`)
+            let imgAlt = galleryTile.getAttribute(`alt`)
+            let imgCaption = galleryTileCaption.textContent
+
+            if (zoomTrigger === "false") {
+                zoomedTileImage.setAttribute(`src`, imgAddress)
+                zoomedTileImage.setAttribute(`alt`, imgAlt)
+                zoomedTile.setAttribute('data-zoom-triggered', true)
+                zoomedTileCaption.textContent = imgCaption
+            }
+
+
+        })
+    })
+
+    zoomedTile.addEventListener('click', () => {
+        let zoomTrigger = zoomedTile.getAttribute('data-zoom-triggered')
+
+        if (zoomTrigger === 'true') {
+            zoomedTile.setAttribute('data-zoom-triggered', false)
+        }
+    })
 }
 
-const galleryTiles = document.querySelectorAll(`figure img`);
-const galleryTile = document.querySelector('figure img');
-const zoomedTileImage = document.querySelector(`#gallery__img-zoomed`);
-const zoomedTileCaption = document.querySelector(`#gallery__caption-zoomed`);
-
-
-galleryTiles.forEach((galleryTile) => {
-    galleryTile.addEventListener('click', () => {
-    })
-})
-
-
-
-// 1. Select single Tile
-// 2. GET (fetch ?) url of gallery img
-// 3. Send (set ? or some way to set the url) in zoomed tile
-// 4. GET figcaption text of gallery img
-// 5. Set figcaption to zoomed tile
-// 6. Set Event => selection of small tile triggers CSS class to display zoom 
-// 7. Set Event => click anywhere to hide zoomed tile
-
+zoomGalleryImage()
