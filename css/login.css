@@ -1,0 +1,203 @@
+:root {
+	/* Font styles */
+
+	--font-family-Rajd: "Rajdhani", sans-serif;
+	--font-family-Face: "facetsnfregular", sans-serif;
+
+	/* Font colors */
+
+	--font-color-h1: black;
+	--font-color-h2-3-4: white;
+	--font-color-standard: hsl(0, 1%, 86%);
+	--font-color-dark: hsl(0, 4%, 25%);
+	--h2-font-color-dark: hsl(0, 0%, 0%);
+
+	/* Elements backgrounds and main colors */
+
+	--color-primary-YELLOW: hsl(43, 100%, 50%);
+	--color-primary-RED: hsl(0, 91%, 41%);
+	--color-primary-BLUE: hsl(216, 95%, 37%);
+	--color-accent: hsl(165, 47%, 30%);
+
+	/* Colors under pictures */
+
+	--color-undercoat-GREEN: hsl(166, 63%, 55%);
+	--color-undercoat-YELLOW: hsl(43, 91%, 55%);
+	--color-undercoat-RED: hsl(0, 93%, 60%);
+	--color-undercoat-BLUE: hsl(216, 85%, 46%);
+
+	/* Paddings and margins */
+
+	/* --MOBILE */
+
+	--padding-mobile-main: 1.2rem 4rem;
+	--padding-mobile-text: 1.2rem;
+
+	/* --TABLET */
+
+	--paddding-tablet-main: 1.8rem clamp(5rem, 6vw, 8.5rem);
+	--padding-tablet-text: 1.3rem;
+
+	/* --TABLET */
+
+	--paddding-desktop-main: 2.6rem clamp(8rem, 10vw, 20rem);
+	--padding-desktop-text: 2.3rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 2.4rem;
+	font-family: "Rajdhani", sans-serif;
+	color: var(--font-color-standard);
+
+	line-height: 1.5;
+	letter-spacing: 2px;
+
+	width: 100vw;
+	height: 100vh;
+	overflow-inline: hidden;
+
+	background-color: black;
+
+	display: grid;
+	place-content: center;
+}
+
+@media (min-width: 670px) {
+	body {
+		position: relative;
+	}
+
+	body::before {
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		background: url(../images/koza_watermark.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		z-index: -9999;
+		filter: opacity(0.06);
+	}
+}
+
+/* ...::: [ LOGIN FORM ] :::...*/
+
+form {
+	width: 80vw;
+	height: 60vh;
+
+	background-color: transparent;
+	border-radius: 20px;
+	box-shadow: 0 0 1em 0 white;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	gap: 3rem;
+
+	position: relative;
+}
+
+h1 {
+	margin-inline: auto;
+	color: var(--color-primary-BLUE);
+}
+
+form::before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background: url(../images/koza_watermark.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: -9999;
+	filter: opacity(0.09);
+}
+
+.username {
+	width: fit-content;
+	margin-inline: auto;
+}
+
+.password {
+	width: fit-content;
+	margin-inline: auto;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+}
+
+form label {
+	display: block;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+input {
+	width: 15em;
+	height: 2em;
+
+	border-radius: 6px;
+	box-shadow: 0 0 5px 0 var(--color-primary-BLUE);
+
+	outline: none;
+}
+
+input:focus {
+	box-shadow: 0 0 0 0.2em black, 0 0 0 0.3em var(--color-primary-BLUE);
+}
+
+.buttons {
+	margin-top: 4rem;
+}
+
+button {
+	width: 13em;
+
+	font-size: 2.8rem;
+	font-weight: 500;
+	color: var(--color-primary-BLUE);
+
+	padding: 0.5em 2em;
+
+	background-color: transparent;
+	border: 2px solid var(--color-primary-BLUE);
+}
+
+button:hover,
+button:focus {
+	background-color: var(--color-primary-BLUE);
+
+	font-weight: 600;
+	color: white;
+
+	box-shadow: 0 0 0 2px black, 0 0 0 4px var(--color-primary-BLUE);
+}

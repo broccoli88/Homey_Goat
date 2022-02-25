@@ -1,0 +1,58 @@
+<form>
+	<section class="contact-form">
+		<label for="name">Name</label>
+		<input
+			type="text"
+			id="name"
+			name="name"
+			placeholder="Enter name"
+			aria-placeholder="Enter name"
+			minlength="3"
+			maxlength="30"
+		/>
+	</section>
+	<section class="contact-form">
+		<label for="last-name"> Last Name</label>
+		<input
+			type="text"
+			id="last-name"
+			name="name"
+			placeholder="Enter name/nickname"
+			aria-placeholder="Enter last name"
+			minlength="3"
+			maxlength="30"
+			required
+			aria-required="true"
+		/>
+	</section>
+	<section class="contact-form">
+		<label for="email">Email</label>
+		<input
+			type="email"
+			id="email"
+			name="name"
+			placeholder="Enter email"
+			aria-placeholder="Enter your email"
+			minlength="3"
+			maxlength="30"
+			required
+			aria-required="true"
+		/>
+	</section>
+	<section class="contact-form">
+		<label for="text-area">How can we help you?</label>
+		<textarea
+			placeholder="Enter your question"
+			aria-placeholder="Enter your question"
+			name="name"
+			id="text-area"
+			rows="10"
+			minlength="3"
+			maxlength="500"
+		></textarea>
+	</section>
+	<button id="form__submit-button" type="submit">SUBMIT</button>
+	<figure aria-hidden="true">
+		<img id="form__img" src="images/covenant.webp" alt="" />
+	</figure>
+</form>
