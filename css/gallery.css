@@ -331,7 +331,8 @@ h2[section-decoration]::after {
 
 		display: grid;
 		justify-content: space-between;
-		grid-template-columns: repeat(auto, clamp(250px, 38vw, 450px));
+		grid-template-columns: repeat(auto, clamp(240px, 30vw, 450px));
+
 
 		row-gap: 4rem;
 	}
@@ -351,6 +352,8 @@ h2[section-decoration]::after {
 
 	.gallery img {
 		cursor: pointer;
+		height: 90%;
+		/* height: clamp(210px, 10vw ,350px); */
 	}
 
 	.gallery figcaption {
