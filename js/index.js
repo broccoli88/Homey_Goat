@@ -53,24 +53,24 @@ navBarToggle();
 
 function zoomGalleryImage() {
   const galleryTiles = document.querySelectorAll(`figure img`);
-  const galleryTileCaption = document.querySelector("figure figcaption");
 
   const zoomedTile = document.querySelector(`#gallery__tile-zoomed`);
   const zoomedTileImage = document.querySelector(`#gallery__img-zoomed`);
   const zoomedTileCaption = document.querySelector(`#gallery__caption-zoomed`);
 
-  galleryTiles.forEach((galleryTile) => {
-    galleryTile.addEventListener("click", () => {
-      let zoomTrigger = zoomedTile.getAttribute("data-zoom-triggered");
-      let imgAddress = galleryTile.getAttribute(`src`);
-      let imgAlt = galleryTile.getAttribute(`alt`);
-      let imgCaption = galleryTileCaption.textContent;
+  galleryTiles.forEach((tile) => {
+    tile.addEventListener("click", (e) => {
+      console.log(zoomedTile);
+      if (zoomedTile.dataset.zoomTriggered === "false") {
+        const img = e.target.src;
+        const alt = e.target.alt;
+        const caption = e.target.nextElementSibling.textContent;
 
-      if (zoomTrigger === "false") {
-        zoomedTileImage.setAttribute(`src`, imgAddress);
-        zoomedTileImage.setAttribute(`alt`, imgAlt);
-        zoomedTile.setAttribute("data-zoom-triggered", true);
-        zoomedTileCaption.textContent = imgCaption;
+        zoomedTileImage.src = img;
+        zoomedTileImage.alt = alt;
+        zoomedTileCaption.textContent = caption;
+
+        zoomedTile.dataset.zoomTriggered = true;
       }
     });
   });
